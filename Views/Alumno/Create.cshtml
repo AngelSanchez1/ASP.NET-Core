@@ -1,0 +1,24 @@
+@model Alumno
+
+@{
+    ViewData["Title"] = "Información del Alumno";
+    Layout = "Simple";
+}
+
+<h1>@ViewData["Title"] </h1>
+<p><i>@ViewBag.MensajeExra</i></p>
+<div asp-validation-summary="All"></div>
+
+
+<form method="post">
+    <div>
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre">
+    </div>
+    
+    <input type="submit" value="Crear">
+    
+</form>
+
+
+<p><i>@ViewBag.Fecha</i></p>
